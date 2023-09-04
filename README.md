@@ -9,7 +9,7 @@
 
 ## 🔌 Installation
 
-You can load Fluent through a GitHub Release:
+You can load awaken notification through a GitHub Release:
 
 ```lua
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Awakenchan/Awaken-UI-s/main/Notification%20Ui"))() 
