@@ -140,15 +140,15 @@ frame1.Size = UDim2.fromOffset(44, 45)
 frame1.Parent = frame
 frame.Parent = notificationWindow
 notificationWindow.Parent = notificationGui
-local Notification = {}
-function Notification:CreateNotification(Mode,ContentText,assetid,Duration)
-  notificationWindow:TweenPosition(
+notificationWindow:TweenPosition(
     UDim2.new(0.918, -256, 0.973, -74), 
     Enum.EasingDirection.Out, 
     Enum.EasingStyle.Quad, 
     0.5, 
     false
   )
+local Notification = {}
+function Notification:CreateNotification(Mode,ContentText,assetid,Duration)
   local imageLabel = Instance.new("ImageLabel")
   imageLabel.Name = "ImageLabel"
   imageLabel.Image = "rbxassetid://"..assetid
