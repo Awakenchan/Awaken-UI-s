@@ -170,7 +170,7 @@ function Notification:CreateNotification(Mode,ContentText,assetid,Duration)
   tittle.Text = Mode
   if string.find(Mode, 'Error') then
     tittle.TextColor3 = Color3.fromRGB(225, 0, 0)
-  elseif  string.find(Mode, 'Info') then
+  elseif string.find(Mode, 'Info') then
     tittle.TextColor3 = Color3.fromRGB(79, 157, 236)
   elseif  string.find(Mode, 'Warn') then
     tittle.TextColor3 = Color3.fromRGB(241, 241, 0)
