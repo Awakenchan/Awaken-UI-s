@@ -19,35 +19,35 @@ local awakenNotification = library:CreateWindow()
 
 ## 📜 Usage
 ```lua
-test:CreateNotification(
+awakenNotification:CreateNotification(
     'Warn:',
     game.Players.LocalPlayer.Name,
     14404156927,
     4
 )
 
-test:CreateNotification(
+awakenNotification:CreateNotification(
     'Info:',
     game.Players.LocalPlayer.Name,
     14404156927,
     4
 )
 
-test:CreateNotification(
+awakenNotification:CreateNotification(
     'Error:',
     game.Players.LocalPlayer.Name,
     14404156927,
     4
 )
 
-test:CreateNotification(
+awakenNotification:CreateNotification(
     'AnyText:',
     'Example',
     14404156927,
     4
 )
 
-test:CreateNotification(
+awakenNotification:CreateNotification(
     Tittle,
     Content,
     AssetId,
