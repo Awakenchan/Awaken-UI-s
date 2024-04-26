@@ -1,0 +1,218 @@
+local loadermodule = {}
+getgenv().animation = true
+getgenv().fadeDuration = 1
+local loader = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local shadow = Instance.new("Folder")
+local shadowFrame = Instance.new("Frame")
+
+--// Loader Frame
+loader.Name = "Loader"
+loader.Parent = game:GetService("CoreGui")
+loader.ZIndexBehavior = Enum.ZIndexBehavior.Global
+
+--// MainFrame Frame
+mainFrame.Name = "MainFrame"
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+mainFrame.BackgroundColor3 = Color3.fromRGB(79, 52, 81)
+mainFrame.BorderColor3 = Color3.fromRGB(26, 5, 34)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.fromScale(0.5, 0.5)
+mainFrame.Size = UDim2.fromScale(0.165, 0.368)
+
+--// Shadow Folder
+shadow.Name = "Shadow"
+--// Shadow Frame
+shadowFrame.Name = "ShadowFrame"
+shadowFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame.BackgroundTransparency = 1
+shadowFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame.BorderSizePixel = 0
+shadowFrame.Size = UDim2.fromScale(1, 1)
+
+local uICorner = Instance.new("UICorner")
+uICorner.Name = "UICorner"
+uICorner.CornerRadius = UDim.new(0, 4)
+uICorner.Parent = shadowFrame
+
+local uIStroke = Instance.new("UIStroke")
+uIStroke.Name = "UIStroke"
+uIStroke.Color = Color3.fromRGB(123, 62, 122)
+uIStroke.Thickness = 2
+uIStroke.Transparency = 0.95
+uIStroke.Parent = shadowFrame
+
+shadowFrame.Parent = shadow
+
+local shadowFrame1 = Instance.new("Frame")
+shadowFrame1.Name = "ShadowFrame"
+shadowFrame1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame1.BackgroundTransparency = 1
+shadowFrame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame1.BorderSizePixel = 0
+shadowFrame1.Size = UDim2.fromScale(1, 1)
+
+local uICorner1 = Instance.new("UICorner")
+uICorner1.Name = "UICorner"
+uICorner1.CornerRadius = UDim.new(0, 4)
+uICorner1.Parent = shadowFrame1
+
+local uIStroke1 = Instance.new("UIStroke")
+uIStroke1.Name = "UIStroke"
+uIStroke1.Color = Color3.fromRGB(123, 62, 122)
+uIStroke1.Thickness = 3
+uIStroke1.Transparency = 0.95
+uIStroke1.Parent = shadowFrame1
+
+shadowFrame1.Parent = shadow
+
+local shadowFrame2 = Instance.new("Frame")
+shadowFrame2.Name = "ShadowFrame"
+shadowFrame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame2.BackgroundTransparency = 1
+shadowFrame2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame2.BorderSizePixel = 0
+shadowFrame2.Size = UDim2.fromScale(1, 1)
+
+local uICorner2 = Instance.new("UICorner")
+uICorner2.Name = "UICorner"
+uICorner2.CornerRadius = UDim.new(0, 4)
+uICorner2.Parent = shadowFrame2
+
+local uIStroke2 = Instance.new("UIStroke")
+uIStroke2.Name = "UIStroke"
+uIStroke2.Color = Color3.fromRGB(123, 62, 122)
+uIStroke2.Thickness = 7
+uIStroke2.Transparency = 0.95
+uIStroke2.Parent = shadowFrame2
+
+shadowFrame2.Parent = shadow
+
+local shadowFrame3 = Instance.new("Frame")
+shadowFrame3.Name = "ShadowFrame"
+shadowFrame3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame3.BackgroundTransparency = 1
+shadowFrame3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+shadowFrame3.BorderSizePixel = 0
+shadowFrame3.Size = UDim2.fromScale(1, 1)
+
+local uICorner3 = Instance.new("UICorner")
+uICorner3.Name = "UICorner"
+uICorner3.CornerRadius = UDim.new(0, 4)
+uICorner3.Parent = shadowFrame3
+
+local uIStroke3 = Instance.new("UIStroke")
+uIStroke3.Name = "UIStroke"
+uIStroke3.Color = Color3.fromRGB(123, 62, 122)
+uIStroke3.Thickness = 5
+uIStroke3.Transparency = 0.95
+uIStroke3.Parent = shadowFrame3
+
+shadowFrame3.Parent = shadow
+
+shadow.Parent = mainFrame
+
+local injectstatus = Instance.new("ScrollingFrame")
+injectstatus.Name = "injectstatus"
+injectstatus.ScrollBarImageColor3 = Color3.fromRGB(202, 135, 196)
+injectstatus.ScrollBarThickness = 4
+injectstatus.Active = true
+injectstatus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+injectstatus.BackgroundTransparency = 1
+injectstatus.BorderColor3 = Color3.fromRGB(0, 0, 0)
+injectstatus.BorderSizePixel = 0
+injectstatus.Position = UDim2.fromScale(0.038, 0.03)
+injectstatus.Size = UDim2.fromScale(0.924, 0.809)
+
+local uIListLayout = Instance.new("UIListLayout")
+uIListLayout.Name = "UIListLayout"
+uIListLayout.HorizontalFlex = Enum.UIFlexAlignment.SpaceEvenly
+uIListLayout.Padding = UDim.new(0, 5)
+uIListLayout.Wraps = true
+uIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+uIListLayout.Parent = injectstatus
+injectstatus.Parent = mainFrame
+local injectlabel = Instance.new("TextLabel")
+injectlabel.Name = "injectlabel"
+injectlabel.FontFace = Font.new(
+  "rbxasset://fonts/families/GothamSSm.json",
+  Enum.FontWeight.Bold,
+  Enum.FontStyle.Normal
+)
+injectlabel.RichText = true
+injectlabel.Text = "Injecting..."
+injectlabel.TextColor3 = Color3.fromRGB(244, 182, 239)
+injectlabel.TextSize = 16
+injectlabel.TextStrokeColor3 = Color3.fromRGB(244, 182, 239)
+injectlabel.TextWrapped = true
+injectlabel.BackgroundColor3 = Color3.fromRGB(112, 74, 109)
+injectlabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+injectlabel.BorderSizePixel = 0
+injectlabel.ClipsDescendants = true
+injectlabel.Position = UDim2.fromScale(0.038, 0.869)
+injectlabel.Size = UDim2.fromScale(0.92, 0.0974)
+injectlabel.Parent = mainFrame
+mainFrame.Parent = loader
+function loadermodule:fadeOutLoader()
+    wait(0.7)
+    local startTime = tick() 
+    while (tick() - startTime) < getgenv().fadeDuration do
+        injectlabel:Destroy()
+        injectstatus:Destroy()
+        local elapsedTime = tick() - startTime
+        local alpha = 0 + (elapsedTime / getgenv().fadeDuration)
+        game:GetService("CoreGui").Loader.MainFrame.BackgroundTransparency = alpha 
+        injectlabel.BackgroundTransparency = alpha
+        wait() 
+    end
+    loader:Destroy() 
+end
+function loadermodule:animateInjectLabel()
+    local states = {"Injecting", "Injecting.", "Injecting..", "Injecting..."}
+    local currentIndex = 1
+    while getgenv().animation do task.wait()
+        injectlabel.Text = states[currentIndex]
+        currentIndex = currentIndex % #states + 1
+        wait(0.5) 
+    end
+    currentIndex = 1
+    injectlabel.Text = "Injected" 
+end
+function loadermodule:Callanimation()
+    coroutine.wrap(loadermodule:animateInjectLabel())()
+end
+local update = {}
+function loadermodule:sendstatus(name,text)
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Name = name
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.Text = text
+    textLabel.TextColor3 = Color3.fromRGB(244, 182, 239)
+    textLabel.TextSize = 14
+    textLabel.TextWrapped = true
+    textLabel.BackgroundTransparency = 1
+    textLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    textLabel.BorderSizePixel = 0
+    textLabel.ClipsDescendants = true
+    textLabel.Size = UDim2.fromScale(0.5, 0.0636)
+    textLabel.Parent = injectstatus
+    table.insert(update, textLabel)
+end
+function loadermodule:updateText(labelName, newText)
+    for _, label in ipairs(update) do
+        if label.Name == labelName then
+            label.Text = newText
+        end
+    end
+end
+--[[
+getgenv().fadeDuration = 1
+loadermodule:Callanimation()
+loadermodule:sendstatus("Bypasstxt",'[⚠] Bypassing Anti cheat...')
+wait(5) 
+loadermodule:updateText("Bypasstxt", "[+] Anti cheat bypassed!")
+getgenv().animation = false
+fadeOutLoader()
+]]
+return loadermodule
