@@ -155,6 +155,9 @@ injectlabel.Position = UDim2.fromScale(0.038, 0.869)
 injectlabel.Size = UDim2.fromScale(0.92, 0.0974)
 injectlabel.Parent = mainFrame
 mainFrame.Parent = loader
+function loadermodule:Changevals(Boolean)
+    getgenv().animation = Boolean
+end
 function loadermodule:fadeOutLoader()
     wait(0.7)
     local startTime = tick() 
@@ -179,12 +182,6 @@ function loadermodule:animateInjectLabel()
     end
     currentIndex = 1
     injectlabel.Text = "Injected" 
-end
-function loadermodule:Callanimation()
-    coroutine.wrap(loadermodule:animateInjectLabel())()
-end
-function loadermodule:Changevals(Boolean)
-    getgenv().animation = Boolean
 end
 function loadermodule:sendstatus(name,text)
     local textLabel = Instance.new("TextLabel")
