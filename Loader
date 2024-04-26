@@ -1,10 +1,11 @@
 local loadermodule = {}
-getgenv().animation = true
-getgenv().fadeDuration = 1
+getgenv().animation = false
+getgenv().fadeDuration = 0
 local loader = Instance.new("ScreenGui")
 local mainFrame = Instance.new("Frame")
 local shadow = Instance.new("Folder")
 local shadowFrame = Instance.new("Frame")
+local update = {}
 
 --// Loader Frame
 loader.Name = "Loader"
@@ -182,7 +183,10 @@ end
 function loadermodule:Callanimation()
     coroutine.wrap(loadermodule:animateInjectLabel())()
 end
-local update = {}
+function loadermodule:Changevals(val,num)
+    getgenv().animation = val
+    getgenv().fadeDuration = num
+end
 function loadermodule:sendstatus(name,text)
     local textLabel = Instance.new("TextLabel")
     textLabel.Name = name
