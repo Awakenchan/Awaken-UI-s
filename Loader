@@ -207,12 +207,15 @@ function loadermodule:updateText(labelName, newText)
     end
 end
 --[[
-getgenv().fadeDuration = 1
-loadermodule:Callanimation()
+loadermodule:Changevals(true)
+coroutine.wrap(function()
+    loadermodule:Changevals(true)
+    loadermodule:animateInjectLabel()
+end)()
 loadermodule:sendstatus("Bypasstxt",'[⚠] Bypassing Anti cheat...')
 wait(5) 
 loadermodule:updateText("Bypasstxt", "[+] Anti cheat bypassed!")
-getgenv().animation = false
-fadeOutLoader()
+loadermodule:Changevals(false)
+loadermodule:fadeOutLoader()
 ]]
 return loadermodule
