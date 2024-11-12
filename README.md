@@ -1,62 +1,27 @@
-# awaken notification Ui Library
+# Ars2.Debug network
 
 ## ⚡ Features
 
-- Clean Ui
-- Ui modes for example: Error, Warn, Info
-- Really simple to use
+- Spies on Network.send Module with also other modules like network.Add and network.Fetch
 <br/>
-
 ## 🔌 Installation
 
-You can load awaken notification through a GitHub Release:
-
 ```lua
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Awakenchan/Awaken-UI-s/main/Notification%20Ui"))() 
-local awakenNotification = library:CreateWindow()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Awakenchan/ARS2-Debug/refs/heads/main/Source"))() 
 ```
 <br/>
 
 ## 📜 Usage
 ```lua
-awakenNotification:CreateNotification(
-    'Warn:',
-    game.Players.LocalPlayer.Name,
-    14404156927,
-    4
-)
-
-awakenNotification:CreateNotification(
-    'Info:',
-    game.Players.LocalPlayer.Name,
-    14404156927,
-    4
-)
-
-awakenNotification:CreateNotification(
-    'Error:',
-    game.Players.LocalPlayer.Name,
-    14404156927,
-    4
-)
-
-awakenNotification:CreateNotification(
-    'AnyText:',
-    'Example',
-    14404156927,
-    4
-)
-
-awakenNotification:CreateNotification(
-    Tittle,
-    Content,
-    AssetId,
-    Waitvalue
-)
-
+how to find args index? look below:
+as you can see in image below, it warns argument/args of network.send but how do we know the index of it?, really simple.
+Args are by default warned via 1-999 so meaning first arge is always the first in line for example "Character State Repeort - first arg |  17131191.111 - 2 Arg"
 ```
+![image](https://i.imgur.com/FP2id4v.png)
 <br/>
 
 ## Credits
 
 - awakenkn / https://e-z.bio/awaken
+
+![image](https://i.imgur.com/T6GNmNz.jpeg)
